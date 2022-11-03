@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/resources/auth_methods.dart';
 import 'package:flutter_app/screens/signup_screen.dart';
-import 'package:flutter_app/screens/welcome_screen.dart';
+import 'package:flutter_app/screens/upload.dart';
 import 'package:flutter_app/utils/colors.dart';
 import 'package:flutter_app/utils/utils.dart';
 import 'package:flutter_app/widgets/text_field_input.dart';
+import 'package:flutter_app/screens/home_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -34,7 +35,7 @@ class _LoginScreenState extends State<LoginScreen> {
     if (res == 'success') {
       Navigator.of(context).pushAndRemoveUntil(
           MaterialPageRoute(
-            builder: (context) => const AddPostScreen(),
+            builder: (context) => const HomeScreenLayout(),
           ),
           (route) => false);
 
@@ -122,7 +123,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   Container(
                     padding: const EdgeInsets.symmetric(vertical: 8),
                     child: const Text(
-                      'Dont have an account?',
+                      "Don't have an account?",
                     ),
                   ),
                   GestureDetector(

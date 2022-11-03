@@ -2,9 +2,11 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_app/providers/user_provider.dart';
+import 'package:flutter_app/screens/home_screen.dart';
 import 'package:flutter_app/screens/login_screen.dart';
 import 'package:flutter_app/screens/signup_screen.dart';
-import 'package:flutter_app/screens/welcome_screen.dart';
+import 'package:flutter_app/screens/view_screen.dart';
+import 'package:flutter_app/screens/upload.dart';
 import 'package:provider/provider.dart';
 
 void main() async {
@@ -35,8 +37,8 @@ class MyApp extends StatelessWidget {
             if (snapshot.connectionState == ConnectionState.active) {
               // Checking if the snapshot has any data or not
               if (snapshot.hasData) {
-                // if snapshot has data which means user is logged in then we check the width of screen and accordingly display the screen layout
-                return AddPostScreen(
+                // if snapshot has data which means user is logged in
+                return const HomeScreenLayout(
                 );
               } else if (snapshot.hasError) {
                 return Center(

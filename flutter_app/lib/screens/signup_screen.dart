@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/resources/auth_methods.dart';
+import 'package:flutter_app/screens/home_screen.dart';
 import 'package:flutter_app/screens/login_screen.dart';
-import 'package:flutter_app/screens/welcome_screen.dart';
+import 'package:flutter_app/screens/upload.dart';
+import 'package:flutter_app/screens/upload.dart';
 import 'package:flutter_app/utils/colors.dart';
 import 'package:flutter_app/utils/utils.dart';
 import 'package:flutter_app/widgets/text_field_input.dart';
@@ -47,7 +49,7 @@ class _SignupScreenState extends State<SignupScreen> {
       // navigate to the home screen
       Navigator.of(context).pushReplacement(
         MaterialPageRoute(
-          builder: (context) => const AddPostScreen(),
+          builder: (context) => const HomeScreenLayout(),
         ),
       );
     } else {
